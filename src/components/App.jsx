@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
+import initialNotes from "../notes.js";
 import CreateArea from "./CreateArea";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(initialNotes);
 
   const addNote = (newNote) => {
     setNotes((prevNotes) => {
